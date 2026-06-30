@@ -319,7 +319,7 @@ export default function TasksPage() {
                       <h3 className={`font-bold text-[14px] text-slate-900 dark:text-white truncate ${task.completed ? 'line-through text-slate-400' : ''}`}>
                         {task.title}
                       </h3>
-                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-2 text-[11px] text-slate-500 font-mono">
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-2 text-[11px] text-slate-750 dark:text-slate-400 font-mono">
                         <span className="bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-2 py-0.5 rounded text-[10px] text-slate-600 dark:text-slate-350">
                           {task.category}
                         </span>

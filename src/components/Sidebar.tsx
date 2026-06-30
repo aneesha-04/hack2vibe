@@ -119,7 +119,7 @@ export const Sidebar: React.FC = () => {
                   className={`group flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-205 relative overflow-hidden ${
                     isActive 
                       ? 'text-primary dark:text-white font-semibold bg-primary/5 dark:bg-white/5 border border-primary/10 dark:border-white/5 shadow-[0_0_15px_rgba(99,102,241,0.06)]' 
-                      : 'text-slate-650 dark:text-slate-400 hover:text-slate-955 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-[rgba(255,255,255,0.03)] border border-transparent'
+                      : 'text-slate-700 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-[rgba(255,255,255,0.03)] border border-transparent'
                   } ${item.highlight ? 'border border-pink-200 dark:border-[rgba(236,72,153,0.15)] bg-gradient-to-r from-pink-500/5 to-purple-500/5 dark:from-pink-950/5 dark:to-purple-950/5' : ''}`}
                 >
                   {isActive && !item.highlight && (
@@ -177,12 +177,12 @@ export const Sidebar: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               className="p-3 rounded-2xl bg-slate-50 dark:bg-white/3 border border-slate-100 dark:border-slate-900/40 space-y-2 text-[11px]"
             >
-              <div className="flex justify-between items-center text-slate-500 dark:text-slate-400">
+              <div className="flex justify-between items-center text-slate-700 dark:text-slate-400 font-semibold">
                 <span className="flex items-center gap-1.5">
                   <TrendingUp className="w-3.5 h-3.5 text-primary" />
                   <span>Productivity</span>
                 </span>
-                <span className="font-mono font-bold text-slate-800 dark:text-slate-250">{productivityScore}%</span>
+                <span className="font-mono font-bold text-slate-900 dark:text-slate-200">{productivityScore}%</span>
               </div>
               <div className="w-full h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                 <motion.div 
@@ -193,12 +193,12 @@ export const Sidebar: React.FC = () => {
                 />
               </div>
 
-              <div className="flex justify-between items-center text-slate-500 dark:text-slate-400 pt-1">
+              <div className="flex justify-between items-center text-slate-700 dark:text-slate-400 pt-1 font-semibold">
                 <span className="flex items-center gap-1.5">
                   <Award className="w-3.5 h-3.5 text-success" />
                   <span>Completion</span>
                 </span>
-                <span className="font-mono font-bold text-slate-800 dark:text-slate-250">{completionPercentage}%</span>
+                <span className="font-mono font-bold text-slate-900 dark:text-slate-200">{completionPercentage}%</span>
               </div>
             </motion.div>
           )}
@@ -206,7 +206,7 @@ export const Sidebar: React.FC = () => {
           {/* Theme Toggle Button */}
           <button
             onClick={toggleTheme}
-            className="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-slate-650 dark:text-slate-400 hover:text-primary dark:hover:text-white hover:bg-slate-100 dark:hover:bg-[rgba(255,255,255,0.03)] border border-transparent transition-all text-[13px] font-medium cursor-pointer shrink-0"
+            className="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-slate-750 dark:text-slate-400 hover:text-primary dark:hover:text-white hover:bg-slate-100 dark:hover:bg-[rgba(255,255,255,0.03)] border border-transparent transition-all text-[13px] font-semibold cursor-pointer shrink-0"
           >
             {theme === 'light' ? (
               <>

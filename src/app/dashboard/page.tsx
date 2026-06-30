@@ -193,30 +193,30 @@ export default function DashboardPage() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 shrink-0 lg:w-auto w-full">
             
             <div className="p-4 rounded-2xl bg-white/70 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 flex flex-col justify-between min-h-[90px] shadow-sm">
-              <span className="text-[11px] font-bold text-slate-500 dark:text-slate-400">Activity Level</span>
+              <span className="text-[11px] font-bold text-slate-700 dark:text-slate-300">Activity Level</span>
               <div className="flex items-baseline gap-1 mt-2">
                 <span className="text-2xl font-black text-slate-900 dark:text-white">{activeTasks.length}</span>
-                <span className="text-[10px] text-slate-500 font-mono">active</span>
+                <span className="text-[10px] text-slate-700 dark:text-slate-400 font-mono font-bold">active</span>
               </div>
             </div>
 
             <div className="p-4 rounded-2xl bg-white/70 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 flex flex-col justify-between min-h-[90px] shadow-sm">
-              <span className="text-[11px] font-bold text-slate-500 dark:text-slate-400">Streak Tracker</span>
+              <span className="text-[11px] font-bold text-slate-700 dark:text-slate-300">Streak Tracker</span>
               <div className="flex items-baseline gap-1 mt-2">
                 <span className="text-2xl font-black text-warning">🔥 {profile.focusStreak}</span>
-                <span className="text-[10px] text-slate-500 font-mono">days</span>
+                <span className="text-[10px] text-slate-700 dark:text-slate-400 font-mono font-bold">days</span>
               </div>
             </div>
 
             <div className="p-4 rounded-2xl bg-white/70 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 flex flex-col justify-between min-h-[90px] shadow-sm">
-              <span className="text-[11px] font-bold text-slate-500 dark:text-slate-400">Productivity</span>
+              <span className="text-[11px] font-bold text-slate-700 dark:text-slate-300">Productivity</span>
               <div className="flex items-baseline gap-1 mt-2">
                 <span className="text-2xl font-black text-primary">{productivityScore}%</span>
               </div>
             </div>
 
             <div className="p-4 rounded-2xl bg-white/70 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 flex flex-col justify-between min-h-[90px] shadow-sm">
-              <span className="text-[11px] font-bold text-slate-500 dark:text-slate-400">Est. Completion</span>
+              <span className="text-[11px] font-bold text-slate-700 dark:text-slate-300">Est. Completion</span>
               <div className="flex items-baseline gap-1 mt-2">
                 <span className="text-2xl font-black text-success">{estimatedCompletionChance}%</span>
               </div>
@@ -309,7 +309,7 @@ export default function DashboardPage() {
                             {task.title}
                           </h4>
                           
-                          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-slate-500 font-mono">
+                          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-slate-750 dark:text-slate-400 font-mono">
                             <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> {task.estimatedHours}h</span>
                             <span>•</span>
                             <span className={`px-1.5 py-0.2 rounded font-bold uppercase text-[9px] ${

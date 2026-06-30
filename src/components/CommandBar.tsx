@@ -128,7 +128,7 @@ export const CommandBar: React.FC = () => {
           {/* Ask AI Page Shortcut */}
           <button
             onClick={() => router.push('/chat')}
-            className="p-2 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200/40 dark:border-white/5 text-slate-650 dark:text-slate-300 hover:text-primary dark:hover:text-white cursor-pointer hover:bg-slate-200/50 transition-colors"
+            className="p-2 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200/40 dark:border-white/5 text-slate-800 dark:text-slate-300 hover:text-primary dark:hover:text-white cursor-pointer hover:bg-slate-200/50 transition-colors"
             title="Ask AI Assistant"
           >
             <Sparkles className="w-4 h-4" />
@@ -138,7 +138,7 @@ export const CommandBar: React.FC = () => {
           <div className="relative">
             <button
               onClick={() => setIsNotificationsOpen(!isNotificationsOpen)}
-              className="p-2 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200/40 dark:border-white/5 text-slate-650 dark:text-slate-300 hover:text-primary dark:hover:text-white cursor-pointer hover:bg-slate-200/50 transition-colors relative"
+              className="p-2 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200/40 dark:border-white/5 text-slate-800 dark:text-slate-300 hover:text-primary dark:hover:text-white cursor-pointer hover:bg-slate-200/50 transition-colors relative"
             >
               <Bell className="w-4 h-4" />
               <span className="absolute top-1 right-1 w-1.5 h-1.5 bg-danger rounded-full" />
@@ -163,14 +163,14 @@ export const CommandBar: React.FC = () => {
                         <span className="w-2 h-2 mt-1.5 rounded-full bg-danger shrink-0" />
                         <div>
                           <p className="font-semibold text-slate-800 dark:text-slate-200">Burnout risk check</p>
-                          <p className="text-[10px] text-slate-550">Stress parameters indicate you should insert rest intervals.</p>
+                          <p className="text-[10px] text-slate-600 dark:text-slate-400">Stress parameters indicate you should insert rest intervals.</p>
                         </div>
                       </div>
                       <div className="flex gap-2.5 items-start">
                         <span className="w-2 h-2 mt-1.5 rounded-full bg-primary shrink-0" />
                         <div>
                           <p className="font-semibold text-slate-800 dark:text-slate-200">Daily planner ready</p>
-                          <p className="text-[10px] text-slate-550">Autopilot has scheduled focus periods for TickTock tasks.</p>
+                          <p className="text-[10px] text-slate-600 dark:text-slate-400">Autopilot has scheduled focus periods for TickTock tasks.</p>
                         </div>
                       </div>
                     </div>
@@ -181,7 +181,7 @@ export const CommandBar: React.FC = () => {
           </div>
 
           {/* Date Widget */}
-          <div className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100/50 dark:bg-white/3 border border-slate-200/30 dark:border-white/3 text-[11px] font-mono text-slate-600 dark:text-slate-400">
+          <div className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100/50 dark:bg-white/3 border border-slate-200/30 dark:border-white/3 text-[11px] font-mono text-slate-750 dark:text-slate-350">
             <CalendarIcon className="w-3.5 h-3.5" />
             <span>{formattedDate}</span>
           </div>

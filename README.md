@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 LastMinute AI
 
-## Getting Started
+> **Predict. Prioritize. Complete.**
 
-First, run the development server:
+LastMinute AI is an AI-powered productivity companion that helps users **avoid missed deadlines** by intelligently prioritizing tasks, predicting deadline risks, and generating personalized action plans. Instead of passive reminders, it actively guides users toward completing their work on time.
+
+## ✨ Features
+
+- 🧠 AI-powered task prioritization
+- ⚠️ Deadline risk prediction
+- 📅 Smart schedule generation
+- 🤖 AI productivity coach
+- 📝 Automatic task breakdown
+- 📊 Productivity analytics
+- 🔥 Rescue Focus Mode
+- 🌙 Modern responsive UI
+
+## 🛠️ Tech Stack
+
+**Frontend**
+- React.js
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+
+**Backend**
+- FastAPI
+- Python
+
+**AI**
+- OpenAI / Gemini API
+
+**Database**
+- Supabase
+
+## 🚀 Getting Started
 
 ```bash
+git clone https://github.com/your-username/LastMinute-AI.git
+
+cd LastMinute-AI
+
+npm install
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💡 Problem Statement
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Traditional reminder apps are easy to ignore. LastMinute AI goes beyond reminders by analyzing deadlines, workload, and schedules to help users make better decisions and complete tasks before it's too late.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎯 Built For
 
-## Learn More
+**Hack2Vibe Hackathon 2026**
 
-To learn more about Next.js, take a look at the following resources:
+Theme: **The Last-Minute Life Saver**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

@@ -77,6 +77,142 @@ const initialHabits: Habit[] = [
   { id: 'h-6', name: 'Sleep', category: 'sleep', target: 8, unit: 'hours', logs: {} }
 ];
 
+const getExampleTasks = (): Task[] => {
+  const today = new Date();
+  
+  const dsaDeadline = new Date(today);
+  dsaDeadline.setHours(today.getHours() + 18);
+
+  const physicsDeadline = new Date(today);
+  physicsDeadline.setDate(today.getDate() + 1);
+  physicsDeadline.setHours(17, 0, 0, 0);
+
+  const taxDeadline = new Date(today);
+  taxDeadline.setDate(today.getDate() + 3);
+
+  return [
+    {
+      id: 'task-example-1',
+      title: 'Finish DSA Presentation Slides',
+      description: 'Prepare 10 slides covering advanced graph algorithms for final evaluation.',
+      deadline: dsaDeadline.toISOString(),
+      estimatedHours: 4,
+      category: 'Study',
+      isRecurring: false,
+      completed: false,
+      createdAt: today.toISOString(),
+      priorityLevel: 'Critical',
+      priorityScore: 92,
+      priorityExplanation: 'High estimated effort relative to deadline. Graph algorithms requires deep cognitive load.',
+      riskLevel: 'Critical Risk',
+      riskProbability: 78,
+      riskExplanation: 'You only have 1 hour of study slots allocated but the task requires 4 hours of focus work.',
+      subtasks: [
+        { id: 'sub-1-1', title: 'Outline graph structures', completed: true },
+        { id: 'sub-1-2', title: 'Add visualization graphics', completed: false },
+        { id: 'sub-1-3', title: 'Draft speech notes', completed: false }
+      ]
+    },
+    {
+      id: 'task-example-2',
+      title: 'Physics Lab Report 4',
+      description: 'Write up experimental results on electromagnetic induction buffers.',
+      deadline: physicsDeadline.toISOString(),
+      estimatedHours: 2.5,
+      category: 'Study',
+      isRecurring: false,
+      completed: false,
+      createdAt: today.toISOString(),
+      priorityLevel: 'High',
+      priorityScore: 78,
+      priorityExplanation: 'Physics report requires statistical calculations and data graphs.',
+      riskLevel: 'Moderate Risk',
+      riskProbability: 35,
+      riskExplanation: 'Sufficient focus windows are available, but deadline is within 36 hours.',
+      subtasks: []
+    },
+    {
+      id: 'task-example-3',
+      title: 'File Personal Tax Returns',
+      description: 'Submit calculated reports and receipts to accounting portal.',
+      deadline: taxDeadline.toISOString(),
+      estimatedHours: 1.5,
+      category: 'Finance',
+      isRecurring: false,
+      completed: false,
+      createdAt: today.toISOString(),
+      priorityLevel: 'Medium',
+      priorityScore: 55,
+      priorityExplanation: 'Financial compliance deadline approaching in 3 days.',
+      riskLevel: 'Safe',
+      riskProbability: 12,
+      riskExplanation: 'Ample time buffer and low complexity.',
+      subtasks: []
+    }
+  ];
+};
+
+const getExampleScheduleBlocks = (): ScheduleBlock[] => {
+  const todayStr = new Date().toISOString().split('T')[0];
+  return [
+    {
+      id: 'block-ex-1',
+      title: '📚 Focus: Finish DSA Presentation Slides',
+      startTime: '09:00',
+      endTime: '10:30',
+      date: todayStr,
+      category: 'Study',
+      isBreak: false
+    },
+    {
+      id: 'block-ex-2',
+      title: '☕ Rest Buffer',
+      startTime: '10:30',
+      endTime: '11:00',
+      date: todayStr,
+      category: 'break',
+      isBreak: true
+    },
+    {
+      id: 'block-ex-3',
+      title: '💻 Coding: Hackathon UI styling',
+      startTime: '11:00',
+      endTime: '12:30',
+      date: todayStr,
+      category: 'Coding',
+      isBreak: false
+    },
+    {
+      id: 'block-ex-4',
+      title: '🍱 Lunch Break',
+      startTime: '12:30',
+      endTime: '13:30',
+      date: todayStr,
+      category: 'break',
+      isBreak: true
+    },
+    {
+      id: 'block-ex-5',
+      title: '🔬 Study: Physics Lab Report 4',
+      startTime: '13:30',
+      endTime: '15:00',
+      date: todayStr,
+      category: 'Study',
+      isBreak: false
+    }
+  ];
+};
+
+const getExampleMoodLogs = (): MoodLog[] => {
+  const todayStr = new Date().toISOString().split('T')[0];
+  return [
+    {
+      date: todayStr,
+      mood: '😊'
+    }
+  ];
+};
+
 const AppContext = createContext<AppContextProps | undefined>(undefined);
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -138,10 +274,32 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       const storedProfile = localStorage.getItem('lm_profile');
       const storedAuth = localStorage.getItem('lm_isLoggedIn');
 
-      if (storedTasks) setTasks(JSON.parse(storedTasks));
-      if (storedBlocks) setScheduleBlocks(JSON.parse(storedBlocks));
+      if (storedTasks && JSON.parse(storedTasks).length > 0) {
+        setTasks(JSON.parse(storedTasks));
+      } else {
+        const defaultTasks = getExampleTasks();
+        setTasks(defaultTasks);
+        localStorage.setItem('lm_tasks', JSON.stringify(defaultTasks));
+      }
+
+      if (storedBlocks && JSON.parse(storedBlocks).length > 0) {
+        setScheduleBlocks(JSON.parse(storedBlocks));
+      } else {
+        const defaultBlocks = getExampleScheduleBlocks();
+        setScheduleBlocks(defaultBlocks);
+        localStorage.setItem('lm_scheduleBlocks', JSON.stringify(defaultBlocks));
+      }
+
       if (storedHabits) setHabits(JSON.parse(storedHabits));
-      if (storedMood) setMoodLogs(JSON.parse(storedMood));
+
+      if (storedMood && JSON.parse(storedMood).length > 0) {
+        setMoodLogs(JSON.parse(storedMood));
+      } else {
+        const defaultMoods = getExampleMoodLogs();
+        setMoodLogs(defaultMoods);
+        localStorage.setItem('lm_moodLogs', JSON.stringify(defaultMoods));
+      }
+
       if (storedReports) setReports(JSON.parse(storedReports));
       
       if (storedSettings) {
@@ -160,6 +318,9 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       
       if (storedAuth === 'true') {
         setIsLoggedIn(true);
+      } else if (storedAuth === null) {
+        setIsLoggedIn(true);
+        localStorage.setItem('lm_isLoggedIn', 'true');
       }
     } catch (e) {
       console.error('Error loading localStorage data', e);

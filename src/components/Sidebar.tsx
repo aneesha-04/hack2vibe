@@ -118,7 +118,7 @@ export const Sidebar: React.FC = () => {
                   onClick={() => setIsOpen(false)}
                   className={`group flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-205 relative overflow-hidden ${
                     isActive 
-                      ? 'text-primary dark:text-white font-semibold bg-primary/5 dark:bg-white/5 border border-primary/10 dark:border-white/5 shadow-[0_0_15px_rgba(99,102,241,0.06)]' 
+                      ? 'text-black dark:text-white font-semibold bg-primary/5 dark:bg-white/5 border border-primary/10 dark:border-white/5 shadow-[0_0_15px_rgba(99,102,241,0.06)]' 
                       : 'text-slate-700 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-[rgba(255,255,255,0.03)] border border-transparent'
                   } ${item.highlight ? 'border border-pink-200 dark:border-[rgba(236,72,153,0.15)] bg-gradient-to-r from-pink-500/5 to-purple-500/5 dark:from-pink-950/5 dark:to-purple-950/5' : ''}`}
                 >
@@ -132,7 +132,7 @@ export const Sidebar: React.FC = () => {
                   
                   <Icon className={`w-[18px] h-[18px] relative z-10 transition-transform duration-200 group-hover:scale-105 shrink-0 ${
                     isActive 
-                      ? item.highlight ? 'text-danger' : 'text-primary' 
+                      ? item.highlight ? 'text-danger' : 'text-black dark:text-white' 
                       : item.highlight ? 'text-danger/80' : 'text-slate-500 dark:text-slate-400 group-hover:text-primary dark:group-hover:text-white'
                   }`} />
                   

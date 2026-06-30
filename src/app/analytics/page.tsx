@@ -141,7 +141,7 @@ export default function AnalyticsPage() {
 
             {/* Burnout Gauge / Percentage */}
             <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-black text-white">{burnoutScore}%</span>
+              <span className="text-4xl font-black text-slate-900 dark:text-white">{burnoutScore}%</span>
               <span className={`text-xs font-bold ${burnoutDetails.color}`}>{burnoutDetails.label}</span>
             </div>
 
@@ -190,7 +190,7 @@ export default function AnalyticsPage() {
                 >
                   <div className="flex justify-between items-center">
                     <div>
-                      <h4 className="font-bold text-xs text-white">{habit.name}</h4>
+                      <h4 className="font-bold text-xs text-slate-900 dark:text-white">{habit.name}</h4>
                       <span className="text-[10px] text-slate-500">Target: {targetVal} {habit.unit}</span>
                     </div>
 
@@ -201,7 +201,7 @@ export default function AnalyticsPage() {
                       >
                         <Minus className="w-3 h-3" />
                       </button>
-                      <span className="text-xs font-bold text-white px-2">{currentVal}</span>
+                      <span className="text-xs font-bold text-slate-900 dark:text-white px-2">{currentVal}</span>
                       <button
                         onClick={() => logHabit(habit.id, today, 1)}
                         className="p-1 rounded bg-slate-900 border border-slate-800 text-slate-400 hover:text-white"

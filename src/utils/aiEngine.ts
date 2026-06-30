@@ -551,7 +551,7 @@ export async function getAIChatResponse(
   const activeTasks = tasks.filter(t => !t.completed);
   const overdueTasks = tasks.filter(t => !t.completed && new Date(t.deadline).getTime() < new Date().getTime());
   
-  const ctxPrompt = `You are LastMinute AI, an empathetic, direct, and action-oriented productivity coach.
+  const ctxPrompt = `You are TickTock AI, an empathetic, direct, and action-oriented productivity coach.
 Your job is to help the user complete tasks on time, avoid procrastination, manage burnout, and schedule effectively.
 Here is the user's workload:
 - ${activeTasks.length} active tasks.
@@ -630,7 +630,7 @@ Coach:`;
   }
 
   if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey')) {
-    return `Hello! I'm LastMinute AI, your proactive productivity coach. I track your workloads, calculate deadline risks, and generate optimized day plans. How can I help you today? You can ask me "What should I do next?", "Do I have any deadline risks?", or tell me how you are feeling!`;
+    return `Hello! I'm TickTock AI, your proactive productivity coach. I track your workloads, calculate deadline risks, and generate optimized day plans. How can I help you today? You can ask me "What should I do next?", "Do I have any deadline risks?", or tell me how you are feeling!`;
   }
 
   return "I'm here to support you! Let's get through this list. I recommend starting Focus Mode on your top priority task. Or, if you need help, I can break down a large project into subtasks for you. What would you like to tackle next?";

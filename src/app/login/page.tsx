@@ -124,7 +124,7 @@ export default function LoginPage() {
         </form>
 
         <div className="mt-6 text-center text-xs text-slate-400">
-          <span>New to LastMinute AI? </span>
+          <span>New to TickTock AI? </span>
           <Link href="/register" className="text-indigo-400 hover:text-indigo-300 hover:underline transition-colors font-medium">
             Create an account
           </Link>

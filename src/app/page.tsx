@@ -36,7 +36,7 @@ export default function LandingPage() {
       case '😫':
         return "Warning: Burnout Risk High. Let's postpone lower-priority tasks. I've rescheduled your study blocks and added recovery buffers.";
       default:
-        return "Click a mood above to see how LastMinute AI re-configures your schedule in real time.";
+        return "Click a mood above to see how TickTock AI re-configures your schedule in real time.";
     }
   };
 
@@ -50,7 +50,7 @@ export default function LandingPage() {
           </div>
           <div>
             <span className="font-bold text-lg leading-none bg-gradient-to-r from-slate-900 dark:from-white to-slate-700 dark:to-slate-300 bg-clip-text text-transparent">
-              LastMinute AI
+              TickTock AI
             </span>
             <span className="block text-[9px] text-cyan-600 dark:text-cyan-400 font-mono tracking-wider glow-text-cyan">THE LIFESAVER</span>
           </div>
@@ -103,7 +103,7 @@ export default function LandingPage() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-base md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mb-10 leading-relaxed"
         >
-          Most apps just remind you when you are already too late. LastMinute AI calculates missing-deadline risks, builds auto-scheduled time blocks, and coaches you to the finish line.
+          Most apps just remind you when you are already too late. TickTock AI calculates missing-deadline risks, builds auto-scheduled time blocks, and coaches you to the finish line.
         </motion.p>
 
         <motion.div 
@@ -188,7 +188,7 @@ export default function LandingPage() {
             <span className="text-xs font-mono text-cyan-600 dark:text-cyan-400 font-bold uppercase tracking-wider mb-2">Mood-Adaptive Recommendation</span>
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">How are you feeling today?</h3>
             <p className="text-slate-650 dark:text-slate-400 text-sm mb-6 leading-relaxed">
-              When stress levels spike or fatigue sets in, traditional trackers keep shouting. LastMinute AI adapts. Select a mood below to see the productivity coach react.
+              When stress levels spike or fatigue sets in, traditional trackers keep shouting. TickTock AI adapts. Select a mood below to see the productivity coach react.
             </p>
 
             <div className="flex gap-4 mb-6 justify-center">
@@ -224,7 +224,7 @@ export default function LandingPage() {
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-4">Advanced AI Workload Shield</h2>
             <p className="text-slate-400 text-sm">
-              We built LastMinute AI around core cognitive behavioral strategies to stop procrastinating and reduce exam/project stress.
+              We built TickTock AI around core cognitive behavioral strategies to stop procrastinating and reduce exam/project stress.
             </p>
           </div>
 
@@ -300,7 +300,7 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="w-full py-10 text-center text-xs text-slate-500 border-t border-slate-200 dark:border-[rgba(255,255,255,0.03)] bg-slate-50 dark:bg-[#03030b] transition-colors duration-300">
-        <p className="mb-2 text-slate-600 dark:text-slate-500">LastMinute AI © 2026 - Modern AI Productivity Assistant</p>
+        <p className="mb-2 text-slate-650 dark:text-slate-500">TickTock AI © 2026 - Modern AI Productivity Assistant</p>
         <p className="text-[10px] text-slate-500 dark:text-slate-700">Built with Next.js, Framer Motion, and Tailwind CSS v4</p>
       </footer>
     </div>

@@ -43,7 +43,7 @@ export default function ChatPage() {
     {
       id: 'welcome',
       role: 'assistant',
-      content: "Hello! I'm LastMinute AI, your proactive productivity coach. I track your workloads, calculate deadline risks, and generate optimized day plans. How can I help you today? You can ask me \"What should I do next?\", \"Do I have any deadline risks?\", or tell me how you are feeling!",
+      content: "Hello! I'm TickTock AI, your proactive productivity coach. I track your workloads, calculate deadline risks, and generate optimized day plans. How can I help you today? You can ask me \"What should I do next?\", \"Do I have any deadline risks?\", or tell me how you are feeling!",
       timestamp: new Date()
     }
   ]);

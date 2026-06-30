@@ -208,23 +208,57 @@ html:not(.dark) body {
   color: #000000 !important;
 }
 
+/* Force all glass-cards to render as pure white in Light Mode */
+html:not(.dark) .glass-card {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  border-color: rgba(120, 110, 90, 0.15) !important;
+  box-shadow: 0 4px 20px rgba(120, 110, 90, 0.04) !important;
+}
+
 /* Change all gray boxes to warm beige in Light Mode */
 html:not(.dark) .bg-slate-50,
 html:not(.dark) .bg-slate-100,
 html:not(.dark) .bg-slate-200,
 html:not(.dark) .bg-slate-250,
+html:not(.dark) .bg-slate-300,
+html:not(.dark) .bg-slate-400,
+html:not(.dark) .bg-slate-500,
+html:not(.dark) .bg-slate-600,
+html:not(.dark) .bg-slate-700,
+html:not(.dark) .bg-slate-800,
+html:not(.dark) .bg-slate-900,
+html:not(.dark) .bg-slate-950,
 html:not(.dark) .bg-slate-100\/50,
 html:not(.dark) .bg-slate-100\/60,
 html:not(.dark) .bg-slate-200\/60,
 html:not(.dark) .bg-slate-200\/50,
-html:not(.dark) .bg-slate-900,
-html:not(.dark) .bg-slate-950,
 html:not(.dark) .bg-slate-950\/40,
 html:not(.dark) .bg-slate-950\/50,
 html:not(.dark) .bg-slate-50\/50,
 html:not(.dark) .bg-slate-950\/20,
 html:not(.dark) .bg-slate-100\/20,
 html:not(.dark) .bg-slate-900\/30,
+html:not(.dark) .bg-zinc-50,
+html:not(.dark) .bg-zinc-100,
+html:not(.dark) .bg-zinc-200,
+html:not(.dark) .bg-zinc-300,
+html:not(.dark) .bg-zinc-450,
+html:not(.dark) .bg-zinc-500,
+html:not(.dark) .bg-zinc-700,
+html:not(.dark) .bg-zinc-800,
+html:not(.dark) .bg-zinc-900,
+html:not(.dark) .bg-zinc-950,
+html:not(.dark) .bg-gray-50,
+html:not(.dark) .bg-gray-100,
+html:not(.dark) .bg-gray-200,
+html:not(.dark) .bg-gray-350,
+html:not(.dark) .bg-gray-400,
+html:not(.dark) .bg-gray-500,
+html:not(.dark) .bg-neutral-50,
+html:not(.dark) .bg-neutral-100,
+html:not(.dark) .bg-neutral-200,
+html:not(.dark) .bg-neutral-300,
 html:not(.dark) .bg-indigo-50,
 html:not(.dark) .bg-indigo-50\/50,
 html:not(.dark) .bg-amber-50\/50,

@@ -118,13 +118,13 @@ export default function CalendarPage() {
   };
 
   const getCategoryColor = (category: string, isBreakBlock: boolean) => {
-    if (isBreakBlock) return 'border-amber-250 bg-amber-50/50 dark:bg-amber-950/10 text-warning';
+    if (isBreakBlock) return 'border-amber-250 bg-white dark:bg-amber-950/10 text-warning';
     switch (category.toLowerCase()) {
-      case 'study': return 'border-indigo-250 bg-indigo-50/50 dark:bg-indigo-950/10 text-primary';
-      case 'coding': return 'border-pink-250 bg-pink-50/50 dark:bg-pink-950/10 text-danger';
-      case 'finance': return 'border-emerald-250 bg-emerald-50/50 dark:bg-emerald-950/10 text-success';
-      case 'work': return 'border-cyan-250 bg-cyan-50/50 dark:bg-cyan-950/10 text-cyan-600 dark:text-accent';
-      default: return 'border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-slate-900/40 text-slate-800 dark:text-slate-350';
+      case 'study': return 'border-indigo-250 bg-white dark:bg-indigo-950/10 text-primary';
+      case 'coding': return 'border-pink-250 bg-white dark:bg-pink-950/10 text-danger';
+      case 'finance': return 'border-emerald-250 bg-white dark:bg-emerald-950/10 text-success';
+      case 'work': return 'border-cyan-250 bg-white dark:bg-cyan-950/10 text-cyan-600 dark:text-accent';
+      default: return 'border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 text-slate-800 dark:text-slate-350';
     }
   };
 
@@ -362,7 +362,7 @@ export default function CalendarPage() {
 
         {/* Right Side: Timeline Agenda */}
         <div className="lg:col-span-2 space-y-4">
-          <div className="glass-card p-6 rounded-3xl border border-slate-200/50 dark:border-white/5 min-h-[500px]">
+          <div className="glass-card p-6 rounded-3xl border border-slate-200/50 dark:border-white/5 min-h-[500px] bg-white dark:bg-slate-950/40">
             <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-850 pb-4 mb-6">
               <h3 className="font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
                 <CalendarIcon className="w-4 h-4 text-primary" />

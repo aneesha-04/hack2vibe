@@ -476,7 +476,7 @@ export default function DashboardPage() {
           </div>
 
           {/* Today's Agenda (Daily Timeline) */}
-          <div className="glass-card p-6 rounded-[22px] border border-slate-200/50 dark:border-white/5">
+          <div className="glass-card p-6 rounded-[22px] border border-slate-200/50 dark:border-white/5 bg-white dark:bg-slate-950/40">
             <div className="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800 mb-4">
               <div className="flex items-center gap-2">
                 <Clock className="w-5 h-5 text-accent" />
